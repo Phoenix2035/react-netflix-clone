@@ -12,7 +12,6 @@ const HomeScreen = () => {
             <MoviesRow
                 title="Netflix Originals"
                 fetchUrl={requests.fetchNetflixOriginals}
-                isLargeRow
             />
             <MoviesRow
                 title="Trending Now"

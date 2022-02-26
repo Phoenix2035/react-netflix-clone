@@ -5,7 +5,7 @@ import "swiper/css";
 import {instance} from "../api"
 
 
-const MoviesRow = ({title, fetchUrl, isLargeRow = false}) => {
+const MoviesRow = ({title, fetchUrl}) => {
     const [movies, setMovies] = useState([])
 
     const base_url = "https://image.tmdb.org/t/p/original"
@@ -18,15 +18,12 @@ const MoviesRow = ({title, fetchUrl, isLargeRow = false}) => {
     }, [fetchUrl])
 
 
-
     return (
         <div className="movies-row">
             <h2>{title}</h2>
 
             <div className="movies-posters">
                 <Swiper
-                    slidesPerView={8}
-                    spaceBetween={10}
                     breakpoints={{
                         200: {
                             slidesPerView: 1.1,
@@ -49,16 +46,17 @@ const MoviesRow = ({title, fetchUrl, isLargeRow = false}) => {
                         },
                         1024: {
                             slidesPerView: 7.3,
-                            spaceBetween: 7,
+                            spaceBetween: 15,
                         },
                     }}
                     className="mySwiper"
                 >
                     {
                         movies?.map(item =>
+                            item.backdrop_path &&
                             <SwiperSlide>
-                                <img className={`movies-poster ${isLargeRow && "movies-poster-large"}`}
-                                     src={`${base_url}${isLargeRow ? item.poster_path : item.backdrop_path}`}
+                                <img className="movies-poster"
+                                     src={`${base_url}${item.backdrop_path}`}
                                      alt={item.name}
                                 />
                             </SwiperSlide>
