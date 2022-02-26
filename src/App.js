@@ -3,7 +3,7 @@ import HomeScreen from "./components/HomeScreen";
 
 function App() {
     return (
-        <div>
+        <div className="container">
             <HomeScreen/>
         </div>
     );

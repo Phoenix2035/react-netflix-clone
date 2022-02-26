@@ -22,7 +22,7 @@ const Nav = () => {
 
     return (
         <div className={`nav ${show && "nav-black"}`}>
-            <div className="nav-content">
+            <div className="nav-contents">
                 <img src={Logo} alt="logo" className="nav-logo"/>
 
                 <img src={Avatar} alt="avatar" className="nav-avatar"/>
