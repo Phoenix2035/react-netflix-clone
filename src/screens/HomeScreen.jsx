@@ -1,13 +1,13 @@
-import {requests} from "../api";
-import Nav from "./Nav";
-import Banner from "./Banner";
-import MoviesRow from "./MoviesRow";
+import { requests } from "../api";
+import Nav from "../components/Nav";
+import Banner from "../components/Banner";
+import MoviesRow from "../components/MoviesRow";
 
 const HomeScreen = () => {
     return (
         <div className="home-screen">
-            <Nav/>
-            <Banner/>
+            <Nav />
+            <Banner />
 
             <MoviesRow
                 title="Netflix Originals"
@@ -28,18 +28,6 @@ const HomeScreen = () => {
             <MoviesRow
                 title="Comedy Movies"
                 fetchUrl={requests.fetchComedyMovies}
-            />
-            <MoviesRow
-                title="Horror Movies"
-                fetchUrl={requests.fetchHorrorMovies}
-            />
-            <MoviesRow
-                title="Romance Movies"
-                fetchUrl={requests.fetchRomanceMovies}
-            />
-            <MoviesRow
-                title="Documentaries"
-                fetchUrl={requests.fetchDocumentaries}
             />
         </div>
     );

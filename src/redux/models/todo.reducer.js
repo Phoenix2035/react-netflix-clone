@@ -1,4 +1,4 @@
-import {createSlice} from "@reduxjs/toolkit"
+import { createSlice } from "@reduxjs/toolkit"
 
 const NetflixReducer = createSlice({
     name: "",
@@ -7,6 +7,6 @@ const NetflixReducer = createSlice({
 })
 
 
-export const {} = NetflixReducer.actions
+export const { } = NetflixReducer.actions
 
 export default NetflixReducer.reducer
