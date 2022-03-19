@@ -17,7 +17,7 @@ const ProfileScreen = () => {
             <div className="profile-body">
                 <h1>Edit Profile</h1>
                 <div className="profile-info">
-                    <img src={Avatar} alt="avatar" />
+                    <img src={Avatar} alt="avatar"/>
 
                     <div className="profile-details">
                         <h2>{user.email}</h2>

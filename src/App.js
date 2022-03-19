@@ -34,10 +34,10 @@ function App() {
                 !user
                     ? <LoginScreen/>
                     :
-                        <Routes>
-                            <Route path="/" element={<HomeScreen/>}/>
-                            <Route path="/profile" element={<ProfileScreen/>}/>
-                        </Routes>
+                    <Routes>
+                        <Route path="/" element={<HomeScreen/>}/>
+                        <Route path="/profile" element={<ProfileScreen/>}/>
+                    </Routes>
             }
 
         </div>
